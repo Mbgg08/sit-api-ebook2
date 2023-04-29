@@ -30,4 +30,11 @@ public class FavoriteBook {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "User_id", nullable = false)
     private User user;
+
+    public FavoriteBook(LocalDateTime createdAt, LocalDateTime updatedAt, Book book, User user) {
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.book = book;
+        this.user = user;
+    }
 }
