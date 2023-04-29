@@ -9,4 +9,10 @@ public interface BookService {
     Book createBook(String title, String author, String description, MultipartFile image);
 
     List<Book> getAllBooks();
+
+    Book getBookById(Long id);
+
+    Book updateBook(Long id,String title, String author, String description, MultipartFile image);
+
+    void deleteBook(Long id);
 }
