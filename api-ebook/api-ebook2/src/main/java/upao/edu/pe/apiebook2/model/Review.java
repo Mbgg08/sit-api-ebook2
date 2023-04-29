@@ -36,4 +36,14 @@ public class Review {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id", nullable = false)
     private User user;
+
+    public Review(String title, String comment, Integer rating, LocalDateTime createdAt, LocalDateTime updatedAt, Book book, User user) {
+        this.title = title;
+        this.comment = comment;
+        this.rating = rating;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.book = book;
+        this.user = user;
+    }
 }
